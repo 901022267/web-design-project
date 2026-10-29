@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Photo gallery celebrating Lesotho's mountains and natural beauty.">
+    <title>Gallery | Explore Lesotho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+        <div class="container"><a class="navbar-brand fw-bold" href="index.html">Explore <span>Lesotho</span></a><button
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Destinations & Activities</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact / Booking</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="page-banner">
+        <div class="container">
+            <p class="eyebrow">A visual journey</p>
+            <h1>Lesotho photo gallery</h1>
+            <p>Open a photo to see a larger preview.</p>
+        </div>
+    </header>
+    <main class="section-pad">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Landscapes & inspiration</p>
+                <h2>Moments worth remembering</h2>
+            </div>
+            <div class="gallery-grid">
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Mountain landscapes"><img
+                        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Tall mountain peaks"><span>Mountain landscapes</span></button>
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Waterfall adventures"><img
+                        src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Waterfall flowing over rocks"><span>Waterfall adventures</span></button>
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Open countryside"><img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Wide open countryside"><span>Open countryside</span></button>
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Winter mountain scenes"><img
+                        src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Snow-covered mountains at dusk"><span>Winter mountain scenes</span></button>
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Lakes and valleys"><img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Lake surrounded by mountains"><span>Lakes and valleys</span></button>
+                <button class="gallery-item"
+                    data-full="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=90"
+                    data-caption="Nature trails"><img
+                        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=80"
+                        width=200 alt="Sunlight over a green valley"><span>Nature trails</span></button>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content gallery-modal">
+                <div class="modal-header border-0">
+                    <h2 class="modal-title fs-5" id="photoModalLabel">Gallery preview</h2><button type="button"
+                        class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close preview"></button>
+                </div>
+                <div class="modal-body pt-0"><img id="modalImage" src="" alt="" class="img-fluid w-100">
+                    <p id="modalCaption" class="mt-3 mb-0"></p>
+                    <div class="d-flex justify-content-between mt-3"><button class="btn btn-outline-light"
+                            id="prevPhoto" type="button">← Previous</button><button class="btn btn-outline-light"
+                            id="nextPhoto" type="button">Next →</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container d-md-flex justify-content-between">
+            <p class="mb-2 mb-md-0">© <span class="year"></span> Explore Lesotho Tourism</p>
+            <p class="mb-0">Discover responsibly. Travel respectfully.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
